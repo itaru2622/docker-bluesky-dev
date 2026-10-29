@@ -10,7 +10,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_${node_ver}.x | sh -; \
     npm install -g pnpm@${pnpm_ver};
 
 # semgrep for social-app rebranding test
-RUN apt install -y python3-pip; \
+RUN apt install -y python3-pip jq; \
     pip install semgrep --break-system-packages;
 
 # add an account in container to keep uid/gid with docker host.
